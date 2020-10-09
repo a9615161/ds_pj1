@@ -41,16 +41,26 @@ class t1:private block
 {
 public:
 	t1( int start_col);
-	void move_down(int** board,int m,int n) ;
-	void move_left(int** board,int m,int n,int dis) ;
-	void move_right(int** board,int m,int n,int dis) ;
-
-
 private:
-	int l, r, d;
-
 };
-
+class t2 :private block
+{
+public:
+	t2(int start_col);
+private:
+}; 
+class t3 :private block
+{
+public:
+	t3(int start_col);
+private:
+};
+class t4 :private block
+{
+public:
+	t4(int start_col);
+private:
+};
 
 
 
