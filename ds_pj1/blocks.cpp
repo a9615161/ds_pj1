@@ -1,7 +1,7 @@
 #include"blocks.h"
 #include<iostream>
 
-void block::move_down(int** board, int m, int n)
+void block::move_down(bool** board, int m, int n)
 {
 	int move = 99999999;
 	int block_num = get_block_num();
@@ -9,9 +9,9 @@ void block::move_down(int** board, int m, int n)
 	for (int i = 0; i < block_num; i++) {
 		int down_dis;
 
-		for (int row = show_cell()[i].first + get_x()
-			, int col = show_cell()[i].second + get_y(), down_dis = 0;
-			row < m; ++down_dis) {
+		for (int row = (show_cell()[i].first) + get_x()
+			,int col = (show_cell()[i].second)+ get_y(),
+			down_dis = 0;row < m; ++down_dis) {
 
 			if (board[row + down_dis][col] == 1)break;
 		}
@@ -21,7 +21,7 @@ void block::move_down(int** board, int m, int n)
 	set_xy(get_x() + move, get_y());
 }
 
-void block::move_left(int** board, int m, int n, int dis)
+void block::move_left(bool** board, int m, int n, int dis)
 {
 	int block_num = get_block_num();
 
@@ -45,7 +45,7 @@ void block::move_left(int** board, int m, int n, int dis)
 	set_xy(get_x() - dis, get_y());
 }
 
-void block::move_right(int** board, int m, int n, int dis)//detect if there are any collision on the moving path
+void block::move_right(bool** board, int m, int n, int dis)//detect if there are any collision on the moving path
 {
 	int block_num = get_block_num();
 

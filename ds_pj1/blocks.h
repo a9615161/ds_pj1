@@ -27,9 +27,9 @@ public:
 	inline int get_y() { return y; }
 	inline int get_block_num(){ return block_num; }
 
-	void move_down(int** board, int m, int n);
-	void move_left(int** board, int m, int n, int dis);
-	void move_right(int** board, int m, int n, int dis);
+	void move_down(bool** board, int m, int n);
+	void move_left(bool** board, int m, int n, int dis);
+	void move_right(bool** board, int m, int n, int dis);
 
 private:
 	cell_vet* cell;
