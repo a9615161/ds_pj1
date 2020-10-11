@@ -146,6 +146,9 @@
     <ClInclude Include="blocks.h" />
     <ClInclude Include="Source.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="TestCase.data" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

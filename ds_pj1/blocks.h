@@ -1,9 +1,12 @@
 #include<iostream>
 #include <string.h>
 #include<utility>
-
+#define max_m 1024
 typedef std::pair<int, int>  cell_vet;
 
+
+//note that x infer to row(downward) and
+	//		y infer to col(rightward)
 class block
 {
 public:
@@ -16,20 +19,22 @@ public:
 	~block() {
 		if(cell!=nullptr)
 			delete[] cell;
+
 	}
 
-	void set_xy(int x_i, int y_i) { x = x_i, y = y_i; block_num = 0; }
+	void set_xy(int x_i, int y_i) { x = x_i, y = y_i;  }
 	void set_block_num(int num) { block_num = num; }
 	void set_cell(cell_vet* to_set) { cell = to_set; }
 
 	cell_vet* show_cell() { return cell; }
+	cell_vet get_cell(int i) { return cell[i]; }
 	inline int get_x() {  return x; }
 	inline int get_y() { return y; }
 	inline int get_block_num(){ return block_num; }
 
-	void move_down(bool** board, int m, int n);
-	void move_left(bool** board, int m, int n, int dis);
-	void move_right(bool** board, int m, int n, int dis);
+	void move_down (bool board[max_m][max_m], int m, int n);
+	void move_left (bool board[max_m][max_m], int m, int n, int dis);
+	void move_right(bool board[max_m][max_m], int m, int n, int dis);
 
 private:
 	cell_vet* cell;
