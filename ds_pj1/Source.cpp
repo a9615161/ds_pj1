@@ -9,8 +9,8 @@
 bool board[1024][1024];
 
 
-void move_board_v(int row_u, int row_b, int dis);//up and bottem
-int check_line(int row_b, int len);
+void move_board_v( int to_erase,int m,int n);//move the rows above the to_erase down by one row
+int check_line(int m,int n);
 
 int main(int argc, char* argv[]) {
 
@@ -61,6 +61,8 @@ int main(int argc, char* argv[]) {
 					[col + moving_block->show_cell()[i].second]
 				= 1;
 			}
+			
+			check_line(m, n);
 
 		}
 
@@ -75,4 +77,23 @@ int main(int argc, char* argv[]) {
 	}
 
 
+}
+
+
+void move_board_v(int to_erase,int m,int n) {
+	if (to_erase > m)return;
+	for (int i = to_erase; i > 0; --i) {
+		for (int j = 1; j <= n; ++j) {
+			board[i][j] = board[i - 1][j];
+		}
+	}
+}
+int check_line(int m, int n) {
+	for (int i = 1; i <= m; ++i) {
+		int flag = 1;
+		for (int j = 1; j <= n; ++j) {
+			if (board[i][j] != 1)flag = 0;
+		}
+		if (flag)move_board_v(i, m, n);
+	}
 }
