@@ -141,7 +141,7 @@ int main(int argc, char* argv[]) {
 				i = 0; i < moving_block->get_block_num(); i++) {
 
 				board[row + moving_block->show_cell()[i].first]
-					[col + moving_block->show_cell()[i].second]
+					 [col + moving_block->show_cell()[i].second]
 				= 1;
 			}
 			
@@ -167,6 +167,7 @@ void print(int m, int n) {
 		}
 		std::cout << "\n";
 	}
+	std::cout << "\n";
 }
 
 void move_board_v(int to_erase,int m,int n) {
@@ -181,7 +182,8 @@ void check_line(int m, int n) {
 	for (int i = 1; i <= m; ++i) {
 		int flag = 1;
 		for (int j = 1; j <= n; ++j) {
-			if (board[i][j] != 1)flag = 0;
+			if (board[i][j] != 1)
+				flag = 0;
 		}
 		if (flag)move_board_v(i, m, n);
 	}
