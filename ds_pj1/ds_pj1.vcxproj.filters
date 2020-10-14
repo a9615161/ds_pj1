@@ -21,6 +21,18 @@
     <ClCompile Include="blocks.cpp">
       <Filter>來源檔案</Filter>
     </ClCompile>
+    <ClCompile Include="T_blocks.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="L_blocks.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="J_blocks.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="Other_blocks.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="blocks.h">

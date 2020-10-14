@@ -67,6 +67,104 @@ public:
 private:
 };
 
+class L1 :private block
+{
+public:
+	L1(int start_col);
+private:
+};
+class L2 :private block
+{
+public:
+	L2(int start_col);
+private:
+};
+class L3 :private block
+{
+public:
+	L3(int start_col);
+private:
+};
+class L4 :private block
+{
+public:
+	L4(int start_col);
+private:
+};
+
+class J1 :private block
+{
+public:
+	J1(int start_col);
+private:
+};
+class J2 :private block
+{
+public:
+	J2(int start_col);
+private:
+};
+class J3 :private block
+{
+public:
+	J3(int start_col);
+private:
+};
+class J4 :private block
+{
+public:
+	J4(int start_col);
+private:
+};
+
+class S1 :private block
+{
+public:
+	S1(int start_col);
+private:
+};
+class S2 :private block
+{
+public:
+	S2(int start_col);
+private:
+};
+
+class Z1 :private block
+{
+public:
+	Z1(int start_col);
+private:
+};
+class Z2 :private block
+{
+public:
+	Z2(int start_col);
+private:
+};
+
+class I1 :private block
+{
+public:
+	I1(int start_col);
+private:
+};
+class I2 :private block
+{
+public:
+	I2(int start_col);
+private:
+};
+class O :private block
+{
+public:
+	O(int start_col);
+private:
+};
+
+
+
+
 
 
 

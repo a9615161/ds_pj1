@@ -140,7 +140,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="blocks.cpp" />
+    <ClCompile Include="J_blocks.cpp" />
+    <ClCompile Include="L_blocks.cpp" />
+    <ClCompile Include="Other_blocks.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="T_blocks.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="blocks.h" />
