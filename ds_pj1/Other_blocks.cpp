@@ -90,10 +90,10 @@ Z2::Z2(int start_col) :block(start_col) {
 	new_cell[0].second = 1;
 
 	new_cell[1].first = 2;
-	new_cell[1].second = 1;
+	new_cell[1].second = 0;
 
 	new_cell[2].first = 2;
-	new_cell[2].second = 2;
+	new_cell[2].second = 1;
 
 	new_cell[3].first = 3;
 	new_cell[3].second = 0;

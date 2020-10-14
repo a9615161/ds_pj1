@@ -12,15 +12,14 @@ void block::move_down(bool board[max_m][max_m], int m, int n)
 
 		for (row = get_cell(i).first + get_x(),
 			col = get_cell(i).second + get_y(),
-			down_dis = 0; row + down_dis < m; ++down_dis) {
+			down_dis = 0; row + down_dis <= m; ++down_dis) {
 
 			if (board[row + down_dis][col] == 1)
 			{
-				--down_dis;
 				break;
 			}
 		}
-
+		--down_dis;//down_dis stop at the place where we can't place block,so we can only place at down_dis-1
 		if (down_dis < move)move = down_dis;
 	}
 	set_xy(get_x() + move, get_y());
@@ -40,7 +39,7 @@ void block::move_left(bool board[max_m][max_m], int m, int n, int dis)
 
 			if ( (col - left_dis < 0) || (board[row][col - left_dis] == 1) )//invaild test case
 			{
-				std::cout << "block can't move right,since (" << row << "," << col - left_dis << ") has a block";
+				std::cout << "block can't move right,since (" << row << "," << col - left_dis << ") has a block\n";
 				return;
 			}
 		}
@@ -64,7 +63,7 @@ void block::move_right(bool board[max_m][max_m], int m, int n, int dis)//detect 
 
 			if ( (col + right_dis > n) || (board[row][col + right_dis] == 1) )//invaild test case
 			{
-				std::cout << "block can't move right,since (" << row << "," << col + right_dis << ") has a block";
+				std::cout << "block can't move right,since (" << row << "," << col + right_dis << ") has a block\n";
 				return;
 			}
 		}
