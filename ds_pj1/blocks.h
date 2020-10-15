@@ -1,5 +1,8 @@
 #include<iostream>
-#include <string.h>
+#ifndef BLOCKS.H
+#define BLOCKS.H
+#include"blocks.h"
+#endif
 #include<utility>
 #define max_m 1024
 typedef std::pair<int, int>  cell_vet;

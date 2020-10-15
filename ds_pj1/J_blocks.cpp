@@ -1,5 +1,7 @@
+#ifndef BLOCKS.H
+#define BLOCKS.H
 #include"blocks.h"
-
+#endif
 /*J1 like this
 0 0 0
 0 1 0

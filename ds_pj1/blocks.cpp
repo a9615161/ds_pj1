@@ -1,4 +1,7 @@
+#ifndef BLOCKS.H
+#define BLOCKS.H
 #include"blocks.h"
+#endif
 #include<iostream>
 
 
